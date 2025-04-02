@@ -1,6 +1,6 @@
 services:
   app:
-    build: .  # Usa o Dockerfile
+    build: .
     image: php:8.3-apache-bullseye
     container_name: laravel-app
     ports:
@@ -12,7 +12,6 @@ services:
       - COMPOSER_ALLOW_SUPERUSER=1
     depends_on:
       - mysql
-  # Banco de Dados MySQL
   mysql:
     image: mysql:8.0
     container_name: laravel-mysql
